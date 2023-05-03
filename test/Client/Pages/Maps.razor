@@ -9,8 +9,11 @@
 @code {
     private async Task InitializeMap()
     {
-        var d = await jsRuntime.InvokeAsync<object>("initialize",null);
-        Console.WriteLine(d.ToString() + "hii");
+        
+        await jsRuntime.InvokeVoidAsync("initialize",null);
+        
+
+        
     }
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
